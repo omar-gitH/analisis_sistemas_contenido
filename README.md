@@ -67,12 +67,29 @@ La aplicación funciona como PWA. Después de abrirla una vez con internet, el n
 
 El service worker no se activa desde `file://` ni durante el modo de desarrollo de Vite.
 
+## Despliegue en Netlify
+
+El proyecto está preparado para desplegarse de manera continua y automática en Netlify:
+
+1. **Configuración de Build:**
+   - **Comando de compilación (*Build command*):** `npm run build`
+   - **Directorio de publicación (*Publish directory*):** `dist`
+2. **Uso del archivo `netlify.toml`:**
+   - La raíz del proyecto incluye un archivo `netlify.toml` que define de forma automática el comando de build (`npm run build`), el directorio de salida (`dist`), los encabezados de caché para la PWA (`sw.js` y `manifest.webmanifest`) y las reglas de seguridad.
+3. **Redirección SPA:**
+   - El archivo `netlify.toml` contiene la regla de redirección `/*` hacia `/index.html` con código HTTP 200 (`status = 200`), asegurando que la navegación interna y las rutas de la aplicación de una sola página (SPA) funcionen correctamente sin arrojar errores 404 al recargar el navegador.
+4. **Configuración de variables de entorno:**
+   - En el panel de Netlify (**Site configuration** > **Environment variables**), puedes definir:
+     - `GEMINI_API_KEY` (o `VITE_GEMINI_API_KEY`): Clave de API de Gemini si utilizas funciones de inteligencia artificial.
+     - `APP_URL`: URL asignada a tu sitio en Netlify (por ejemplo, `https://tu-sitio.netlify.app`).
+
 ## Estructura principal
 
 - `src/`: componentes, estilos, datos y lógica de la aplicación.
 - `public/`: recursos públicos y archivos necesarios para la PWA.
 - `scratch/`: material auxiliar utilizado durante el desarrollo.
 - `inject_diagrams.cjs`: script auxiliar para preparar diagramas o contenido complementario.
+- `netlify.toml`: configuración de despliegue y reglas de redirección SPA en Netlify.
 - `vercel.json`: configuración de despliegue en Vercel.
 
 ## Contexto académico
