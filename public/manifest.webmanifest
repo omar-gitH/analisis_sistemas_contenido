@@ -1,0 +1,20 @@
+{
+  "name": "Análisis de Sistemas - Plataforma de Estudio",
+  "short_name": "Análisis de Sistemas",
+  "description": "Plataforma interactiva de lectura y evaluación de Análisis de Sistemas.",
+  "lang": "es",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#2563eb",
+  "background_color": "#f8fafc",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

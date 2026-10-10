@@ -1,0 +1,6 @@
+{
+  "name": "Análisis de Sistemas - Plataforma Interactiva de Estudio",
+  "description": "Plataforma interactiva de lectura, búsqueda inteligente y evaluación estilo NotebookLM basada en el Resumen de Análisis de Sistemas (UTN FRLP).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
